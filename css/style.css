@@ -125,6 +125,7 @@ section {
 }
 
 .button {
+  display: inline-block;
   cursor: pointer;
   color: #fff;
   padding: 14px 40px;

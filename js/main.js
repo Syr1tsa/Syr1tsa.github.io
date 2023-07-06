@@ -10,14 +10,6 @@ reviewsSlideFrames.forEach(figure => {
 
   imageReview.src = `//img.youtube.com/vi/${frameId}/0.jpg`
   figure.appendChild(imageReview)
-
-  figure.addEventListener('click', function(){
-    window.open(
-      figure.dataset.src,
-      '_blank'
-    );
-    
-  })
 })
 
 window.onload = function () {
