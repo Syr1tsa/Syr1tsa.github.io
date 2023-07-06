@@ -226,8 +226,7 @@ section {
 .navbar-item {
   display: inline-flex;
   padding: 12px;
-  border: 2px solid #FFFFFF;
-  border-radius: 32px;
+  border-radius: 5px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -235,6 +234,88 @@ section {
   justify-content: center;
   overflow: hidden;
 }
+
+.navbar-item span{
+	border-radius: 5px
+}
+
+.navbar-item span:nth-child(1) {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to right, #171618, #92E3A9);
+	animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+.navbar-item span:nth-child(2) {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 3px;
+	background: linear-gradient(to bottom, #171618, #92E3A9);
+	animation: animate2 2s linear infinite;
+	animation-delay: 1s;
+}
+@keyframes animate2 {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+.navbar-item span:nth-child(3) {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to left, #171618, #92E3A9);
+	animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.navbar-item span:nth-child(4) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 3px;
+	background: linear-gradient(to top, #171618, #92E3A9);
+	animation: animate4 2s linear infinite;
+	animation-delay: 1s;
+}
+
+@keyframes animate4 {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
+}
+
 
 .navbar-item-link {
   font-size: 20px;
@@ -246,21 +327,6 @@ section {
 .navbar-block {
   display: none;
   text-align: center;
-}
-
-.navbar-item-translate{
-  transform: rotate(50deg);
-  width: 100%;
-  height: 250%;
-  left: -200px;
-  top: -30px;
-  background: #92e3a9;
-  position: absolute;
-  transition: all .5s ease-Out;
-}
-
-.navbar-item:hover .navbar-item-translate {
-  left: 0;
 }
 
 .burger {
