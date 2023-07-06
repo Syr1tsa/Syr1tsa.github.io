@@ -135,6 +135,13 @@ section {
   transition:all 0.4s ease-out;
 }
 
+@media screen and (max-width: 500px){
+  .button {
+    display: block;
+    width: 96%;
+  }
+}
+
 .button:hover {
   background:#92e3a9;
   color:#000;
