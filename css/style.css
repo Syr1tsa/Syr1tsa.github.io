@@ -243,6 +243,11 @@ section {
   transition: all .45s ease-Out;
 }
 
+.navbar-block {
+  display: none;
+  text-align: center;
+}
+
 .navbar-item-translate{
   transform: rotate(50deg);
   width: 100%;
@@ -283,16 +288,20 @@ section {
 
 @media screen and (max-width: 676px) {
   .burger {
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    z-index: 999;
     display: block;
   }
   .navbar-list {
     margin-top: 40px;
     width: 100%;
     position: absolute;
-    z-index: 999;
+    z-index: 998;
     right: 0;
-    top: 15vh;
-    height: 85vh;
+    top: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -305,10 +314,24 @@ section {
     opacity: 0;
     display: block;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+  }
+  .navbar-item:first-child{
+    margin-top: 120px;
   }
   .navbar-item-link {
-    font-size: 24px;
+    font-size: 18px;
+  }
+  .navbar-block {
+    margin-top: 20px;
+    color: #fff;
+    display: block;
+  }
+  .navbar-logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 999;
   }
 }
 
@@ -325,6 +348,10 @@ section {
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+.burger-toggle {
+  top: 50px;
 }
 
 .burger-toggle .line-1 {
@@ -554,7 +581,7 @@ box-shadow: 0 2px 20px rgba(0,0,0,.2);
 
 .reviews {
   position: relative;
-  margin-top: 150px;
+  margin-top: 70px;
 }
 
 .reviews-title {
@@ -789,7 +816,7 @@ stroke-dashoffset:410;
 
 .plan {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .plan-title {
@@ -872,6 +899,7 @@ stroke-dashoffset:410;
 .skills {
   color: #fff;
   font-weight: 700;
+  margin-bottom: 100px;
 }
 
 .skills-title {
@@ -995,25 +1023,22 @@ stroke-dashoffset:410;
   }
 
   .work-block:hover{
-    border-radius: 0;
-    border-bottom-right-radius: 0;
-    transform: scale(1.15);
+    padding: 20px 0;
+    padding-top: 60px;
+    transform: scale(1);
+    margin-bottom: 50px;
+    background: transparent;
+    border-radius: 10px;
   }
 
   .work-block:not(:last-child){
     margin-right: 0;
   }
-
-  .work-block:hover{
-    transform: scale(1);
-    margin-bottom: 0;
-    background: transparent;
-  }
 }
 
 /* about section */
 .about {
-  margin-top: 100px;
+  margin-top: 50px;
   color: #fff;
 }
 
@@ -1411,6 +1436,7 @@ stroke-dashoffset:410;
   font-weight: 800;
   margin: 20px 0;
   display: block;
+  color: #fff;
 }
 
 .form-places .red {
@@ -1648,8 +1674,10 @@ section.faq {
   position: absolute;
   top: 50%; 
   left: 250%;
-  background: #fff;
+  background: #181820;
   opacity: 0;
+  border: 1px solid #fff;
+  border-radius: 10px;
   transition: all 0.5s ease-in-out;
 }
 
@@ -1663,7 +1691,6 @@ section.faq {
   height: 32px;
   padding: 12px 30px;
   overflow: hidden;
-  background: #e2525c;
 }
 
 .btn-close {
@@ -1678,7 +1705,7 @@ section.faq {
 
 .good-job {
   text-align: center;
-  color: #e2525c;
+  color: #92E3A9;
 }
 .good-job .fa-thumbs-o-up {
   font-size: 60px;
